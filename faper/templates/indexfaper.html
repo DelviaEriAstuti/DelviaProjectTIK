@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>FAKULTAS PERTANIAN</h1>
+        <img src="\static\img\faper.png" height="200px">
+        <h2>Tentang Fakultas Pertanian</h2>
+        <p style="font-family: 'times new roman'">Fakultas Pertanian berdiri pada tahun 1984 dan dikenal sebagai fakultas berwarna hijau di Untirta. Julukan itu tentunya disematkan atas dasar andil fakultas tersebut pada bidang pertanian tiap tahunnya. Pada tahun 2017, Fakultas Pertanian berhasil memiliki lahan pertanian baru di daerah Karang Triti kecamatan Baros. Luas lahan pertanian ini mencapai 19.494 m2.
+
+            Fakultas Pertanian Universitas Sultan Ageng Tirtayasa merupakan salah satu Fakultas yang ada di lingkungan Universitas Sultan Ageng Tirtayasa yang pada awalnya didirikan berdasarkan SK Ketua Yayasan Pendidikan Tirtayasa Nomor : 020/YPT/VIII/1984 tanggal 31 Agustus 1984 dengan Jurusan Sosial Ekonomi Pertanian Program Studi Sosial Ekonomi Pertanian.
+            
+            Perubahan sosial politik yang terjadi di Indonesia telah ikut mempengaruhi perubahan yang terjadi pada Universitas Sultan Ageng Tirtayasa. Didasari oleh perkembangan Untirta sebagai Perguruan Tinggi Swasta yang kurang signifikan dan spirit era reformasi telah mendorong Pimpinan Universitas dan para Pimpinan Fakultas di lingkungan Universitas Tirtayasa serta Pengurus Yayasan Pendidikan Tirtayasa dan dukungan para tokoh Banten mengusulkan penegerian Universitas Sultan Ageng Tirtayasa kepada pemerintah pusat melalui Departemen Pendidikan Nasional. Selanjutnya pada tanggal 13 Oktober 1999 keluarlah Keppres RI Nomor; 130/1999 tentang Persiapan Perguruan Tinggi Negeri Universitas Sultan Ageng Tirtayasa. Atas kerja keras dan kesungguhan dari pimpinan Untirta dan pengurus Yayasan maka pada tahun 2001 berdasarkan Keputusan Presiden RI Nomor: 32 tanggal 19 Maret 2001 Universitas Sultan Ageng Tirtayasa secara resmi ditetapkan menjadi PerguruanTinggi Negeri definitif.</p>
+    </center>
+</body>
+</html>
+
+    </center>
+    
+    <h2>Daftar Prodi :</h2>
+    
+    {% for judul in title %} 
+    <li>{{ judul }}</li>
+    {% endfor %}
+
+
+{% endblock %}

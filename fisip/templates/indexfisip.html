@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>FAKULTAS ILMU SOSIAL DAN POLITIK</h1>
+        <img src="\static\img\fisip.png" height="200px">
+        <h2>Tentang Fakultas Ilmu Sosial dan Politik</h2> 
+        <p style="font-family: 'times new roman'">Fakultas Ilmu Sosial dan Ilmu Politik Universitas Pembangunan Nasional Veteran Jakarta yang proses pendiriannya sudah mulai dirintis keberadaannya sesuai dengan sejak tanggal 11 Nopember 1994 melalui Surat Keputusan Menteri Pertahanan dan Keamanan R.I.No:Kep 10/XI/1994.</p>
+    </center>
+</body>
+</html>
+    </center>
+    
+    <h2>Daftar Prodi :</h2>
+    
+    {% for judul in title %} 
+    <li>{{ judul }}</li>
+    {% endfor %}
+
+
+{% endblock %}

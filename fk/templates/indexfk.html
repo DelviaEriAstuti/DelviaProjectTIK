@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>FAKULTAS KEDOKTERAN</h1>
+        <img src="\static\img\fk.png" height="200px">
+        <h2>Tentang Fakultas Kedokteran</h2> 
+        <p style="font-family: 'times new roman'">Fakultas Kedokteran UNTIRTA merupakan fakultas baru di universitas Sultan Ageng Tirtayasa yang terbentuk sejak program studi pendidikan dokter disahkan berdasarkan SK Menteri Riset Teknologi dan Pendidikan Tinggi Republik Indonesia Nomor 283/KPT/I/2019. Program studi Kedokteran Untirta saat ini dibawah pengampuan FK UI.
+
+            FK Untirta yang terdiri atas 5 Program Studi merupakan salah satu strategi untuk mendukung program kesehatan di Provinsi Banten
+            
+            Program Studi ini bertujuan untuk menghasilkanntenaga dokter yang kompeten di tingkat nasional dan internasional. Program studi kedokteran Untirta merupakan langkah strategis dalam memperluas peran UNTIRTA pada masalah kesehatan yang dihadapi masyarakat Indonesia pada umumnya dan masyarakat banten pada khususnya.Program Studi Kedokteran UNTIRTA memperluas akses bagi putra dan putri terbaik lulusan SMA di Provinsi Banten.</p>
+    </center>
+</body>
+</html>
+    </center>
+    
+    <h2>Daftar Prodi :</h2>
+    
+    {% for judul in title %} 
+    <li>{{ judul }}</li>
+    {% endfor %}
+
+
+{% endblock %}

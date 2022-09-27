@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>FAKULTAS HUKUM</h1>
+        <img src="\static\img\fh.png" height="200px">
+        <h2>Tentang Fakultas Hukum</h2>
+        <p style="font-family: 'times new roman'">Fakultas Hukum Universitas Sultan Ageng Tirtayasa berdiri tahun 1981, tepatnya pada tanggal 1 Oktober 1981 dengan status sebagai STIH Serang yang bertempat di Kresidenan Banten, Jl. K.H. Sam’un dan merupakan embrio lahirnya Universitas Sultan Ageng Tirtayasa Banten. Mulai tahun 1984, STIH Serang di integrasi sesuai dengan SK Mendikbud No. 0596/0/1984, menjadi Fakultas Hukum Universitas Sultan Ageng Tirtayasa yang bertempat di Jl. Raya Jakarta KM. 4 Pakupatan – Serang.</p>
+    </center>
+</body>
+</html>
+    </center>
+    
+    <h2>Daftar Prodi :</h2>
+    
+    {% for judul in title %} 
+    <li>{{ judul }}</li>
+    {% endfor %}
+
+
+{% endblock %}
