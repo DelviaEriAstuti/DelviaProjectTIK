@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<body>
+    <center>
+      <h1>Dosen Pendidikan Matematika</h1>
+    </center>
+    <br>
+   
+    
+    <center>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Jabatan</th>
+            <th>Email</th>
+            <th>Foto</th>
+        </tr>
+        {% for Dosen in lecturer %}
+          <tr>
+              <td>{{Dosen.no}}</td>
+              <td>{{Dosen.nip}}</td>
+              <td>{{Dosen.nama}}</td>
+              <td>{{Dosen.jabatan}}</td>
+              <td>{{Dosen.email}}</td>
+              <td>
+                  {% if Dosen.foto %}
+                  <img src="{{ Dosen.foto.url }}" width="100px">
+                  {% endif %}
+              </td>
+  
+  
+          </tr>
+          {% endfor %}
+      
+  </table>
+
+  </center>
+  </body>
+
+{% endblock %}
