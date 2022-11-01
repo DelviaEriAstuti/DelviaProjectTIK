@@ -18,9 +18,12 @@
             <th>Jabatan</th>
             <th>Email</th>
             <th>Foto</th>
+            <th>ACTION</th>
         </tr>
-        {% for Dosen in lecturer %}
-          <tr>
+        
+            {% for Dosen in lecturer %}
+            <tr>
+              <td><a href="{% url 'ubah_dosen' dosen.id %}">{{dosen.no}}</a></td>
               <td>{{Dosen.no}}</td>
               <td>{{Dosen.nip}}</td>
               <td>{{Dosen.nama}}</td>
@@ -31,14 +34,73 @@
                   <img src="{{ Dosen.foto.url }}" width="100px">
                   {% endif %}
               </td>
-  
-  
+              <td>
+                <a href="{% url 'hapus_dosen' dosen.id %}" class="btn btn-danger">Hapus</a>
+            </td>
+            <td>
+                
+            </td>
           </tr>
           {% endfor %}
       
   </table>
+  <a href="http://127.0.0.1:8000/tambah-dosen/">Tambah Dosen</a>
 
   </center>
-  </body>
 
-{% endblock %}
+ <style>
+        .table1 {
+        font-family: sans-serif;
+        color: rgb(0, 0, 0) ;
+        border-collapse: collapse;
+        width: 50%;
+        border: 1px solid rgba(163, 110, 163, 0.43) ;
+    }
+     
+    .table1 tr th{
+        background: rgba(163, 110, 163, 0.43) ;
+        color: rgb(0, 0, 0);
+        font-weight: normal;
+    }
+     
+    .table1, th, td {
+        padding: 8px 20px;
+        text-align: center;
+    }
+     
+    .table1 tr:hover {
+        background-color: rgba(245, 227, 245, 0.43) ;
+    }
+     
+    .table1 tr:nth-child(even) {
+        <style>
+            .table1 {
+            font-family: sans-serif;
+            color: rgb(0, 0, 0) ;
+            border-collapse: collapse;
+            width: 50%;
+            border: 1px solid rgba(163, 110, 163, 0.43) ;
+        }
+         
+        .table1 tr th{
+            background: rgba(163, 110, 163, 0.43) ;
+            color: rgb(0, 0, 0);
+            font-weight: normal;
+        }
+         
+        .table1, th, td {
+            padding: 8px 20px;
+            text-align: center;
+        }
+         
+        .table1 tr:hover {
+            background-color: rgba(245, 227, 245, 0.43) ;
+        }
+         
+        .table1 tr:nth-child(even) {
+            background-color: rgba(163, 110, 163, 0.43) ;
+}
+</style>
+        
+    
+    {% endblock %}

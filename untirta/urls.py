@@ -28,8 +28,20 @@ from pascasarjana.views import prodi8
 from profil.views import profil
 from univ.views import univ 
 from Dosen.views import dosen
+from Dosen.views import tambah_dosen
+from Dosen.views import ubah_dosen
+from Dosen.views import hapus_dosen
 from Mahasiswa.views import mahasiswa
+from Mahasiswa.views import tambah_mahasiswa
+from Mahasiswa.views import ubah_mahasiswa
+from Mahasiswa.views import hapus_mahasiswa
 from TenagaPendidik.views import tenagapendidik
+from TenagaPendidik.views import tambah_tenagapendidik
+from TenagaPendidik.views import ubah_tenagapendidik
+from TenagaPendidik.views import hapus_tenagapendidik
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,8 +56,18 @@ urlpatterns = [
     path('profil/', profil),
     path('univ/', univ),
     path('Dosen/', dosen),
+    path('tambah-dosen/', tambah_dosen, name='tambah_dosen'),
+    path('Dosen/ubah/<int:id_dosen>', ubah_dosen, name='ubah_dosen'),
+    path('Dosen/hapus/<int:id_dosen>', hapus_dosen, name='hapus_dosen'),
     path('Mahasiswa/', mahasiswa),
+    path('tambah-mahasiswa/', tambah_mahasiswa, name='tambah_mahasiswa'),
+    path('Mahasiswa/ubah/<int:id_mahasiswa>', ubah_mahasiswa, name='ubah_mahasiswa'),
+    path('Mahasiswa/hapus/<int:id_mahasiswa>', hapus_mahasiswa, name='hapus_mahasiswa'),
     path('TenagaPendidik/', tenagapendidik),
+    path('tambah-tendik/', tambah_tenagapendidik, name='tambah_tenagapendidik'),
+    path('TenagaPendidik/ubah/<int:id_tenagapendidik>', ubah_tenagapendidik, name='ubah_tenagapendidik'),
+    path('TenagaPendidik/hapus/<int:id_tenagapendidik>', hapus_tenagapendidik, name='hapus_tenagapendidik'),
+
 
 
     ]
